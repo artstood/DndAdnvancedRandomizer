@@ -1,0 +1,65 @@
+[
+
+  {
+    "race": {
+      "raceName": "dwarf_race",
+      "improvedStats": ["CON","CON"]
+    }
+  },
+
+  {
+    "race": {
+      "raceName": "elf_race",
+      "improvedStats": ["DEX","DEX"]
+    }
+  },
+  {
+    "race": {
+      "raceName": "halfling_race",
+      "improvedStats": ["DEX","DEX"]
+      }
+  },
+
+  {
+    "race": {
+      "raceName": "human_race",
+      "improvedStats": ["STR","DEX", "CON", "INT", "WIS", "CHA"]
+    }
+  },
+
+  {
+    "race": {
+      "raceName": "dragonborn_race",
+      "improvedStats": ["STR","STR","CHA"]
+    }
+  },
+
+  {
+    "race": {
+      "raceName": "gnome_race",
+      "improvedStats": ["DEX"]
+    }
+  },
+
+  {
+    "race": {
+      "raceName": "half-elf_race",
+      "improvedStats": ["CHA","CHA","RAND","RAND"]
+    }
+  },
+
+  {
+    "race": {
+      "raceName": "half-orc_race",
+      "improvedStats": ["STR","STR","CON"]
+      }
+  },
+
+  {
+    "race": {
+      "raceName": "tiefling_race",
+      "improvedStats": ["CHA","CHA","INT"]
+    }
+  }
+
+]

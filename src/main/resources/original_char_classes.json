@@ -1,0 +1,88 @@
+[
+    {
+        "template": {
+            "className": "barbarian_class",
+            "majorStat": ["STR"],
+            "secondaryStat": ["CON"]
+        }
+    },
+
+    {
+        "template": {
+            "className": "cleric_class",
+            "majorStat": ["WIS"],
+            "secondaryStat": ["CON","STR"]
+        }
+    },
+    {
+        "template": {
+            "className": "druid_class",
+            "majorStat": ["WIS"],
+            "secondaryStat": ["CON"]
+        }
+    },
+    {
+        "template": {
+            "className": "bard_class",
+            "majorStat": ["CHA"],
+            "secondaryStat": ["DEX"]
+        }
+    },
+    {
+        "template": {
+            "className": "fighter_class",
+            "majorStat": ["DEX","STR"],
+            "secondaryStat": ["INT","CON"]
+        }
+    },
+    {
+        "template": {
+            "className": "monk_class",
+            "majorStat": ["DEX"],
+            "secondaryStat": ["WIS"]
+        }
+    },
+    {
+        "template": {
+            "className": "paladin_class",
+            "majorStat": ["STR"],
+            "secondaryStat": ["CHA"]
+        }
+    },
+    {
+        "template": {
+            "className": "ranger_class",
+            "majorStat": ["STR", "DEX"],
+            "secondaryStat": ["WIS"]
+        }
+    },
+    {
+        "template": {
+            "className": "rogue_class",
+            "majorStat": ["DEX"],
+            "secondaryStat": ["WIS","CHA"]
+        }
+    },
+    {
+        "template": {
+            "className": "sorcerer_class",
+            "majorStat": ["CHA"],
+            "secondaryStat": ["CON"]
+        }
+    },
+    {
+        "template": {
+            "className": "warlock_class",
+            "majorStat": ["CHA"],
+            "secondaryStat": ["CON"]
+        }
+    },
+    {
+        "template": {
+            "className": "wizard_class",
+            "majorStat": ["INT"],
+            "secondaryStat": ["CON","DEX","CHA"]
+        }
+    }
+
+]
