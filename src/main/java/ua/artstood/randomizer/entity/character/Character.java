@@ -58,6 +58,25 @@ public class Character {
         System.out.println(background.getFlaw());
     }
 
+    public Race getRace() {
+        return race;
+    }
+
+    public CharClass getCharClass() {
+        return charClass;
+    }
+
+    public Alignment getAlignment() {
+        return alignment;
+    }
+
+    public Background getBackground() {
+        return background;
+    }
+
+    public Stats getStats() {
+        return stats;
+    }
 }
 
 
