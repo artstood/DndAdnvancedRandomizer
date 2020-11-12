@@ -1,188 +1,219 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-<SplitPane dividerPositions="0.2672413793103448, 0.44612068965517243" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="930.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.artstood.randomizer.controller.MainController">
-  <items>
-      <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.artstood.randomizer.controller.MainController">
+   <children>
+      <SplitPane dividerPositions="0.7886497064579256" orientation="VERTICAL" prefHeight="513.0" prefWidth="932.0">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-               <children>
-                  <GridPane layoutX="28.0" layoutY="22.0" prefHeight="144.0" prefWidth="199.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="63.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="136.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+            <SplitPane dividerPositions="0.2672413793103448, 0.44612068965517243" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="455.0" prefWidth="930.0">
+              <items>
+                  <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0">
+                    <items>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <GridPane layoutX="28.0" layoutY="22.0" prefHeight="144.0" prefWidth="199.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="128.0" minWidth="10.0" prefWidth="63.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="136.0" minWidth="10.0" prefWidth="136.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label prefHeight="17.0" prefWidth="63.0" text="Race:" />
+                                    <Label prefHeight="17.0" prefWidth="63.0" text="Class:" GridPane.rowIndex="1" />
+                                    <Label prefHeight="17.0" prefWidth="63.0" text="Alignment:" GridPane.rowIndex="2" />
+                                    <Label fx:id="raceField" prefHeight="17.0" prefWidth="129.0" text="na" GridPane.columnIndex="1" />
+                                    <Label fx:id="classField" prefHeight="17.0" prefWidth="130.0" text="na" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="alignmentField" prefHeight="17.0" prefWidth="129.0" text="na" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                           <children>
+                              <Label layoutX="61.0" layoutY="7.0" text="Stats">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                              <GridPane layoutX="20.0" layoutY="34.0" prefHeight="134.0" prefWidth="121.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="32.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="25.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="28.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Value" GridPane.columnIndex="1" />
+                                    <Label text="Mod" GridPane.columnIndex="2" />
+                                    <Label text="STR:" GridPane.rowIndex="1" />
+                                    <Label text="WIS:" GridPane.rowIndex="5" />
+                                    <Label text="CON:" GridPane.rowIndex="3" />
+                                    <Label text="DEX:" GridPane.rowIndex="2" />
+                                    <Label text="CHA:" GridPane.rowIndex="6" />
+                                    <Label text="INT:" GridPane.rowIndex="4" />
+                                    <Label fx:id="strValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="dexValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Label fx:id="conValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label fx:id="intValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Label fx:id="wisValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Label fx:id="chaValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <Label fx:id="strMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Label fx:id="dexMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Label fx:id="conMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Label fx:id="intMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Label fx:id="wisMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <Label fx:id="chaMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                    </items>
+                  </SplitPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="176.0">
                      <children>
-                        <Label prefHeight="17.0" prefWidth="63.0" text="Race:" />
-                        <Label prefHeight="17.0" prefWidth="63.0" text="Class:" GridPane.rowIndex="1" />
-                        <Label prefHeight="17.0" prefWidth="63.0" text="Alignment:" GridPane.rowIndex="2" />
-                        <Label fx:id="raceField" prefHeight="17.0" prefWidth="129.0" text="na" GridPane.columnIndex="1" />
-                        <Label fx:id="classField" prefHeight="17.0" prefWidth="130.0" text="na" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="alignmentField" prefHeight="17.0" prefWidth="129.0" text="na" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label layoutX="65.0" layoutY="13.0" text="Skills">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <GridPane layoutX="13.0" layoutY="52.0" prefHeight="346.0" prefWidth="130.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="117.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="13.0" />
+                              <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                              <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="21.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="-" GridPane.columnIndex="1" />
+                               <CheckBox mnemonicParsing="false" text="Acrobatics:" />
+            
+                                          <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Animal Handling" GridPane.rowIndex="1" />
+                              <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Arcana" GridPane.rowIndex="2" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="3" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="4" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="5" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="6" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="7" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="8" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="9" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="10" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="11" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            
+                                           <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="12" />
+                               <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            
+                                       </children>
+                        </GridPane>
                      </children>
-                  </GridPane>
-               </children>
-            </AnchorPane>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
-               <children>
-                  <Label layoutX="61.0" layoutY="7.0" text="Stats">
-                     <font>
-                        <Font size="18.0" />
-                     </font></Label>
-                  <GridPane layoutX="20.0" layoutY="34.0" prefHeight="134.0" prefWidth="121.0">
-                    <columnConstraints>
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="32.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="107.0" minWidth="10.0" prefWidth="25.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="124.0" minWidth="10.0" prefWidth="28.0" />
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                    </rowConstraints>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="398.0" prefWidth="489.0">
                      <children>
-                        <Label text="Value" GridPane.columnIndex="1" />
-                        <Label text="Mod" GridPane.columnIndex="2" />
-                        <Label text="STR:" GridPane.rowIndex="1" />
-                        <Label text="WIS:" GridPane.rowIndex="5" />
-                        <Label text="CON:" GridPane.rowIndex="3" />
-                        <Label text="DEX:" GridPane.rowIndex="2" />
-                        <Label text="CHA:" GridPane.rowIndex="6" />
-                        <Label text="INT:" GridPane.rowIndex="4" />
-                        <Label fx:id="strValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Label fx:id="dexValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Label fx:id="conValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Label fx:id="intValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <Label fx:id="wisValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                        <Label fx:id="chaValue" text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                        <Label fx:id="strMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Label fx:id="dexMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Label fx:id="conMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Label fx:id="intMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                        <Label fx:id="wisMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                        <Label fx:id="chaMod" text="-" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                        <Label layoutX="235.0" layoutY="14.0" text="Background">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="backType" layoutX="254.0" layoutY="41.0" text="back name" />
+                        <Label layoutX="22.0" layoutY="66.0" text="Speciality:" />
+                        <Label layoutX="22.0" layoutY="93.0" text="Feature:" />
+                        <Label layoutX="22.0" layoutY="119.0" text="Trait:" />
+                        <Label layoutX="21.0" layoutY="199.0" text="Ideal:" />
+                        <Label layoutX="20.0" layoutY="242.0" text="Bond:" />
+                        <Label layoutX="22.0" layoutY="299.0" text="Flaw:" />
+                        <Label fx:id="specName" layoutX="86.0" layoutY="66.0" prefHeight="17.0" prefWidth="394.0" text="spec name" />
+                        <Label fx:id="featName" layoutX="86.0" layoutY="93.0" prefHeight="17.0" prefWidth="213.0" text="feature name" />
+                        <TextArea fx:id="traitField" editable="false" layoutX="86.0" layoutY="122.0" prefHeight="73.0" prefWidth="394.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="idealField" editable="false" layoutX="86.0" layoutY="199.0" prefHeight="38.0" prefWidth="394.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="bondField" editable="false" layoutX="86.0" layoutY="242.0" prefHeight="38.0" prefWidth="394.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextArea>
+                        <TextArea fx:id="flawField" editable="false" layoutX="86.0" layoutY="284.0" prefHeight="38.0" prefWidth="394.0">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </TextArea>
                      </children>
-                  </GridPane>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="47.0" prefWidth="930.0">
+               <children>
+                  <Button layoutX="28.0" layoutY="13.0" mnemonicParsing="false" onAction="#recreate" prefHeight="25.0" prefWidth="79.0" text="Recreate" />
+                  <Button layoutX="802.0" layoutY="13.0" mnemonicParsing="false" onAction="#saveCharacter" text="Save" />
+                  <Button layoutX="851.0" layoutY="13.0" mnemonicParsing="false" onAction="#loadCharacter" text="Load" />
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
-    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="176.0">
-         <children>
-            <Label layoutX="65.0" layoutY="13.0" text="Skills">
-               <font>
-                  <Font size="18.0" />
-               </font></Label>
-            <GridPane layoutX="13.0" layoutY="52.0" prefHeight="346.0" prefWidth="130.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="131.0" minWidth="10.0" prefWidth="117.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="88.0" minWidth="10.0" prefWidth="13.0" />
-                  <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
-                  <ColumnConstraints maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="21.0" minHeight="10.0" prefHeight="21.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-                  <RowConstraints maxHeight="25.0" minHeight="10.0" prefHeight="18.0" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label text="-" GridPane.columnIndex="1" />
-                   <CheckBox mnemonicParsing="false" text="Acrobatics:" />
-
-                  <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Animal Handling" GridPane.rowIndex="1" />
-                  <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Arcana" GridPane.rowIndex="2" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="3" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="4" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="5" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="6" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="7" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="8" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="9" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="9" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="10" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="10" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="11" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="11" />
-
-                   <CheckBox mnemonicParsing="false" prefHeight="17.0" prefWidth="119.0" text="Athletics" GridPane.rowIndex="12" />
-                   <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="12" />
-
-               </children>
-            </GridPane>
-         </children></AnchorPane>
-      <AnchorPane prefHeight="398.0" prefWidth="489.0">
-         <children>
-            <Label layoutX="235.0" layoutY="14.0" text="Background">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
-            <Label fx:id="backType" layoutX="254.0" layoutY="41.0" text="back name" />
-            <Label layoutX="22.0" layoutY="66.0" text="Speciality:" />
-            <Label layoutX="22.0" layoutY="93.0" text="Feature:" />
-            <Label layoutX="22.0" layoutY="119.0" text="Trait:" />
-            <Label layoutX="21.0" layoutY="199.0" text="Ideal:" />
-            <Label layoutX="20.0" layoutY="242.0" text="Bond:" />
-            <Label layoutX="22.0" layoutY="299.0" text="Flaw:" />
-            <Label fx:id="specName" layoutX="86.0" layoutY="66.0" prefHeight="17.0" prefWidth="244.0" text="spec name" />
-            <Label fx:id="featName" layoutX="86.0" layoutY="93.0" text="featire name" />
-            <TextArea fx:id="traitField" editable="false" layoutX="86.0" layoutY="122.0" prefHeight="73.0" prefWidth="394.0">
-               <font>
-                  <Font size="10.0" />
-               </font></TextArea>
-            <TextArea fx:id="idealField" editable="false" layoutX="86.0" layoutY="199.0" prefHeight="38.0" prefWidth="394.0">
-               <font>
-                  <Font size="10.0" />
-               </font></TextArea>
-            <TextArea fx:id="bondField" editable="false" layoutX="86.0" layoutY="242.0" prefHeight="38.0" prefWidth="394.0">
-               <font>
-                  <Font size="10.0" />
-               </font></TextArea>
-            <TextArea fx:id="flawField" editable="false" layoutX="86.0" layoutY="284.0" prefHeight="38.0" prefWidth="394.0">
-               <font>
-                  <Font size="10.0" />
-               </font></TextArea>
-         </children></AnchorPane>
-  </items>
-</SplitPane>
+   </children>
+</AnchorPane>

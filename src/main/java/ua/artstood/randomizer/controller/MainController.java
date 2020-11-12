@@ -1,11 +1,15 @@
 package ua.artstood.randomizer.controller;
 
+import javafx.event.ActionEvent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import ua.artstood.randomizer.entity.character.Character;
 import ua.artstood.randomizer.entity.singleton.CharacterInit;
 
 public class MainController {
+    //todo сделать кнопку генерации
+    //todo сделать разные языки
+
     public Label raceField;
     public Label classField;
     public Label alignmentField;
@@ -39,6 +43,10 @@ public class MainController {
     public void initialize(){
         CharacterInit init = CharacterInit.getInstance();
         currentChar = init.createRandomCharacter();
+        setupCharacter(currentChar);
+    }
+    private void setupCharacter(Character currentChar){
+
 
         raceField.setText(currentChar.getRace().getName());
         classField.setText(currentChar.getCharClass().getClassName());
@@ -75,7 +83,19 @@ public class MainController {
         flawField.setText(currentChar.getBackground().getFlaw());
 
 
+    }
 
+    public void recreate(ActionEvent actionEvent) {
+        CharacterInit init = CharacterInit.getInstance();
+        currentChar = init.createRandomCharacter();
+        setupCharacter(currentChar);
+    }
 
+    public void saveCharacter(ActionEvent actionEvent) {
+        //todo
+    }
+
+    public void loadCharacter(ActionEvent actionEvent) {
+        //todo
     }
 }
